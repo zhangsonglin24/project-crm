@@ -6,10 +6,12 @@ import org.apache.shiro.authc.AuthenticationToken;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
+import org.springframework.stereotype.Component;
 
 /**
  * Created by Administrator on 2017/3/18.
  */
+@Component
 public class ShiroDbRealm extends AuthorizingRealm {
     /**
      * 权限认证
