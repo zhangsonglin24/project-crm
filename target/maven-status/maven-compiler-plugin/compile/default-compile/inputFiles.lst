@@ -1,5 +1,6 @@
-D:\crm\project-crm\src\main\java\com\crm\controller\UserController.java
-D:\crm\project-crm\src\main\java\com\crm\shiro\ShiroDbRealm.java
-D:\crm\project-crm\src\main\java\com\crm\pojo\Role.java
-D:\crm\project-crm\src\main\java\com\crm\shiro\ShiroUtil.java
-D:\crm\project-crm\src\main\java\com\crm\pojo\User.java
+E:\project\crm\src\main\java\com\crm\pojo\User.java
+E:\project\crm\src\main\java\com\crm\pojo\Role.java
+E:\project\crm\src\main\java\com\crm\controller\HomeController.java
+E:\project\crm\src\main\java\com\crm\controller\UserController.java
+E:\project\crm\src\main\java\com\crm\shiro\ShiroDbRealm.java
+E:\project\crm\src\main\java\com\crm\shiro\ShiroUtil.java

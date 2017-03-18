@@ -16,10 +16,6 @@
 
 
   <dependencies>
-<<<<<<< HEAD
-=======
-
->>>>>>> cf976444ee0279463caf7199eb531b21317ccb9f
 
     <dependency>
       <groupId>junit</groupId>
