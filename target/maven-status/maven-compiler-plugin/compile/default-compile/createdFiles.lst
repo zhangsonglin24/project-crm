@@ -2,5 +2,9 @@ com\crm\shiro\ShiroUtil.class
 com\crm\controller\HomeController.class
 com\crm\pojo\User.class
 com\crm\pojo\Role.class
-com\crm\controller\UserController.class
+com\crm\dao\UserDao.class
 com\crm\shiro\ShiroDbRealm.class
+com\crm\Service\UserService.class
+com\crm\controller\AdminController.class
+com\crm\controller\UserController.class
+com\crm\dao\BaseDao.class
