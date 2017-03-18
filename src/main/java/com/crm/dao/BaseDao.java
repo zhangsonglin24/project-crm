@@ -43,6 +43,6 @@ public class BaseDao<T,PK extends Serializable> {
 
    public List<T> findAll(){
        Criteria criteria=getSession().createCriteria(clazz);
-       criteria.list();
+      return    criteria.list();
    }
 }
