@@ -15,7 +15,7 @@
         <!--登录后地址-->
         <property name="successUrl" value="/home"/>
         <!--给没有权限的用户的地址-->
-        <property name="unauthorizedUrl" value="/404"/>
+        <property name="unauthorizedUrl" value="/403"/>
         <!--权限配置-->
         <property name="filterChainDefinitions">
             <value>
