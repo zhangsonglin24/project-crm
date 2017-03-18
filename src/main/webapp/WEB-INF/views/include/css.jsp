@@ -9,7 +9,7 @@
 <!-- Bootstrap 3.3.6 -->
 <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
 <!-- Font Awesome -->
-<link rel="stylesheet" href="/static/dist/css/fontawesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/static/plugins/fontawesome/css/font-awesome.min.css">
 <!-- Theme style -->
 <link rel="stylesheet" href="/static/dist/css/AdminLTE.min.css">
 <!-- AdminLTE Skins. Choose a skin from the css/skins
