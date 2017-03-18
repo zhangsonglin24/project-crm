@@ -43,5 +43,34 @@
     <!--基于注解的事务-->
     <tx:annotation-driven transaction-manager="transactionManager"/>
 
+    <!--shiro-->
+    <bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+        <property name="securityManager" ref="securityManager"/>
+        <!--登录的地址-->
+        <property name="loginUrl" value="/"/>
+        <!--登录后地址-->
+        <property name="successUrl" value="/home"/>
+        <!--给没有权限的用户的地址-->
+        <property name="unauthorizedUrl" value="/404"/>
+        <!--权限配置-->
+        <property name="filterChainDefinitions">
+            <value>
+                /static/** = anon<!--匿名访问-->
+                /wx/** = anon
+                /user = roles[role_admin]<!--防止他人从url进入-->
+                /setting/** = roles[role_admin]
+                /** =authc<!--根及其子目录认证-->
+            </value>
+        </property>
+    </bean>
+
+
+    <bean id="securityManager"  class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
+        <property name="realm" ref="shiroDbRealm"/>
+        <property name="cacheManager" ref="cacheManager"/>
+    </bean>
+
+    <bean id="cacheManager" class="org.apache.shiro.cache.MemoryConstrainedCacheManager"></bean>
+    <bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor"></bean>
 
 </beans>
