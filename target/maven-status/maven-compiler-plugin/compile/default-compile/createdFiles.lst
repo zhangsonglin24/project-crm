@@ -1,4 +1,5 @@
 com\crm\shiro\ShiroUtil.class
+com\crm\controller\HomeController.class
 com\crm\pojo\User.class
 com\crm\pojo\Role.class
 com\crm\controller\UserController.class
