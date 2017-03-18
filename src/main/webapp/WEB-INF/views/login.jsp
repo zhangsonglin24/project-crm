@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
@@ -64,21 +64,3 @@
         });
     });
 </script>
-=======
-<%--
-  Created by IntelliJ IDEA.
-  User: Administrator
-  Date: 2017/3/18
-  Time: 11:13
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Title</title>
-</head>
-<body>
-<h1>login!!!!!</h1>
->>>>>>> b608f21ea311e18cbf46fdcacd840503d85dbe4d
-</body>
-</html>
