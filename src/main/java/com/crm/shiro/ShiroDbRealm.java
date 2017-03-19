@@ -42,8 +42,13 @@ public class ShiroDbRealm extends AuthorizingRealm {
         String userName=usernamePasswordToken.getUsername();
         User user=userService.findByUserName(userName);
         if(user !=null){
+            if(!user.getEnable()){
+                throw new LockedAccountException("账号已被禁用");
+            }
             return  new  SimpleAuthenticationInfo(user, user.getPassword(),getName());
+        }else {
+            throw new LockedAccountException("账号或密码错误");
         }
-        return null;
+
     }
 }

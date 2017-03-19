@@ -19,5 +19,6 @@ public class User {
     private String weixin;
     private Timestamp createtime;
     private Integer roleid;
+    private Boolean enable;
 
 }
