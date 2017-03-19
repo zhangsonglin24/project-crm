@@ -1,18 +1,16 @@
 package com.crm.shiro;
 
-import com.crm.Service.UserService;
 import com.crm.pojo.User;
+import com.crm.service.UserService;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.util.DigestUtils;
 
-/**
- * Created by Administrator on 2017/3/18.
- */
+
+
 @Component
 public class ShiroDbRealm extends AuthorizingRealm {
 

@@ -2,16 +2,12 @@ package com.crm.pojo;
 
 import lombok.Data;
 
-import javax.persistence.*;
 import java.sql.Timestamp;
 
 @Data
-@Entity
-@Table(name = "t_user")
 public class User {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private Integer id;
     private String username;
     private String password;
@@ -20,5 +16,7 @@ public class User {
     private Timestamp createtime;
     private Integer roleid;
     private Boolean enable;
+
+
 
 }

@@ -1,7 +1,5 @@
-package com.crm.Service;
+package com.crm.service;
 
-/**
- * Created by Administrator on 2017/3/18.
- */
-public class RoleService {
+
+public interface RoleService {
 }

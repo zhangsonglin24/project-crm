@@ -1,11 +1,13 @@
 package com.crm.controller;
 
 
-import com.crm.Service.UserService;
-import com.crm.pojo.User;
+import com.crm.dto.FlashMessage;
+import com.crm.service.UserService;
+import com.crm.util.ServletUtil;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
+import org.apache.shiro.authc.LockedAccountException;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,18 +39,19 @@ public class HomeController {
         /*shiro方式登录*/
         Subject subject= SecurityUtils.getSubject();
         try{
-            subject.login(new UsernamePasswordToken(username, DigestUtils.md5Hex(password)));
-
+           // subject.login(new UsernamePasswordToken(username, DigestUtils.md5Hex(password)));
+            subject.login(new UsernamePasswordToken(username,password));
             /*获取登录的IP*/
-            userService.saveUserLogin(request.getRemoteAddr());
+            userService.saveUserLogin(ServletUtil.getRemoteIp(request));
 
             return "redirect:/home";
-        }catch (AuthenticationException ex){
-            ex.printStackTrace();
+        }catch (LockedAccountException ex){
+           redirectAttributes.addFlashAttribute("message", new FlashMessage(FlashMessage.STATE_ERROR,"账号被禁用"));
 
-            return "redirect:/";
+        }catch (AuthenticationException exception){
+            redirectAttributes.addFlashAttribute("message",new FlashMessage(FlashMessage.STATE_ERROR,"账号或密码错误"));
         }
-
+        return "redirect:/";
     }
 
 
@@ -57,4 +60,15 @@ public class HomeController {
         return "home";
     }
 
+    @GetMapping("/logout")
+    public String logout(RedirectAttributes redirectAttributes){
+      SecurityUtils.getSubject().logout();
+       redirectAttributes.addFlashAttribute("message",new FlashMessage("你以安全退出"));
+        return "redirect:/";
+    }
+
+    @GetMapping("/403")
+    public String error403(){
+        return "403";
+    }
 }
