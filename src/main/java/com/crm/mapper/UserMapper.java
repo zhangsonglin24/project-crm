@@ -1,8 +1,9 @@
-package com.crm.service;
+package com.crm.mapper;
 
 
 import com.crm.pojo.User;
 
-public interface UserService {
+public interface UserMapper {
+
     User findByUserName(String userName);
 }

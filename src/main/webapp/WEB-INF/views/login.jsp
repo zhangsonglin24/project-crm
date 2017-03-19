@@ -19,6 +19,9 @@
     </div>
     <!-- /.login-logo -->
     <div class="login-box-body">
+        <c:if test="${not empty message}">
+
+        </c:if>
 
         <form action="/" method="post">
             <div class="form-group has-feedback">
