@@ -1,7 +1,9 @@
 package com.crm.service.impl;
 
+import com.crm.mapper.RoleMapper;
 import com.crm.mapper.UserLogMapper;
 import com.crm.mapper.UserMapper;
+import com.crm.pojo.Role;
 import com.crm.pojo.User;
 import com.crm.pojo.UserLog;
 import com.crm.service.UserService;
@@ -17,6 +19,8 @@ public class UserServiceImpl implements UserService {
     private UserMapper userMapper;
     @Autowired
     private UserLogMapper userLogMapper;
+    @Autowired
+    private RoleMapper roleMapper;
 
     @Override
     public User findByUserName(String userName) {
@@ -35,5 +39,10 @@ public class UserServiceImpl implements UserService {
         userLog.setLogintime(DateTime.now().toString("YYYY-MM-dd HH:mm"));
         userLogMapper.save(userLog);
 
+    }
+
+    @Override
+    public Role findRoleByRoleId(Integer roliId) {
+        return roleMapper.findRoleById(roliId);
     }
 }

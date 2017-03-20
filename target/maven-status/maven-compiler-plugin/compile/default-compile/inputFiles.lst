@@ -6,6 +6,7 @@ D:\crm\project-crm\src\main\java\com\crm\service\impl\UserServiceImpl.java
 D:\crm\project-crm\src\main\java\com\crm\service\UserService.java
 D:\crm\project-crm\src\main\java\com\crm\mapper\UserLogMapper.java
 D:\crm\project-crm\src\main\java\com\crm\mapper\UserMapper.java
+D:\crm\project-crm\src\main\java\com\crm\mapper\RoleMapper.java
 D:\crm\project-crm\src\main\java\com\crm\controller\UserController.java
 D:\crm\project-crm\src\main\java\com\crm\dto\FlashMessage.java
 D:\crm\project-crm\src\main\java\com\crm\shiro\ShiroUtil.java
