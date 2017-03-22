@@ -30,7 +30,7 @@ public class ShiroDbRealm extends AuthorizingRealm {
         User user= (User) principalCollection.getPrimaryPrincipal();
             if(user !=null){
                 //根据用户的roleID获取role
-                Integer roliId=user.getId();
+                Integer roliId=user.getRoleid();
                 Role role=userService.findRoleByRoleId(roliId);
 
                 //将用户的角色赋给info

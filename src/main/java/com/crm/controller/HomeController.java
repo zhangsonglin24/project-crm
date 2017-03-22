@@ -1,10 +1,8 @@
 package com.crm.controller;
 
 
-import com.crm.dto.FlashMessage;
 import com.crm.service.UserService;
 import com.crm.util.ServletUtil;
-import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.LockedAccountException;
